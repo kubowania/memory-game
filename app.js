@@ -71,7 +71,10 @@ document.addEventListener("DOMContentLoaded", () => {
     //flip your card
     function flipCard() {
         var cardId = this.getAttribute("data-id");
-        if (cardsChosenId.includes(cardId)) {
+        if (
+            cardsChosenId.includes(cardId) ||
+            cardsWon.flat().includes(gridCardArray[cardId].name)
+        ) {
             return;
         }
         cardsChosen.push(gridCardArray[cardId].name);
