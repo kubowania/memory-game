@@ -3,51 +3,51 @@ document.addEventListener('DOMContentLoaded', () => {
   const cardArray = [
     {
       name: 'fries',
-      img: 'images/fries.png'
+      img: 'fries.png'
     },
     {
       name: 'cheeseburger',
-      img: 'images/cheeseburger.png'
+      img: 'cheeseburger.png'
     },
     {
       name: 'ice-cream',
-      img: 'images/ice-cream.png'
+      img: 'ice-cream.png'
     },
     {
       name: 'pizza',
-      img: 'images/pizza.png'
+      img: 'pizza.png'
     },
     {
       name: 'milkshake',
-      img: 'images/milkshake.png'
+      img: 'milkshake.png'
     },
     {
       name: 'hotdog',
-      img: 'images/hotdog.png'
+      img: 'hotdog.png'
     },
     {
       name: 'fries',
-      img: 'images/fries.png'
+      img: 'fries.png'
     },
     {
       name: 'cheeseburger',
-      img: 'images/cheeseburger.png'
+      img: '/cheeseburger.png'
     },
     {
       name: 'ice-cream',
-      img: 'images/ice-cream.png'
+      img: 'ice-cream.png'
     },
     {
       name: 'pizza',
-      img: 'images/pizza.png'
+      img: 'pizza.png'
     },
     {
       name: 'milkshake',
-      img: 'images/milkshake.png'
+      img: 'milkshake.png'
     },
     {
       name: 'hotdog',
-      img: 'images/hotdog.png'
+      img: 'hotdog.png'
     }
   ]
 
