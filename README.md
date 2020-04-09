@@ -7,7 +7,7 @@ Memory Game, also known as the Concentration card game or Matching Game, is a si
 
 In this repo, I will be putting extra focus on setting Attributes in JavaScript. If you want to learn how to use setAttritube and getAttribute effectively, please have a look at my code.
 
-I have kept the styling at a bare miniumum for you to go wild and make it your own. Please tag me as I would LOVE to see yuor game!!!
+I have kept the styling at a bare miniumum for you to go wild and make it your own. Please tag me as I would LOVE to see your game!!!
 
 ## What inbuilt functions are we going to focus on?
 - for loops
