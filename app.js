@@ -79,6 +79,9 @@ document.addEventListener('DOMContentLoaded', () => {
       alert('You found a match')
       cards[optionOneId].setAttribute('src', 'images/white.png')
       cards[optionTwoId].setAttribute('src', 'images/white.png')
+      //remove click event listener else the user may click on the white image
+      cards[optionOneId].removeEventListener('click', flipCard);
+      cards[optionTwoId].removeEventListener('click', flipCard);
       cardsWon.push(cardsChosen)
     } else {
       cards[optionOneId].setAttribute('src', 'images/blank.png')
