@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+
   //card options
+
   const cardArray = [
     {
       name: 'fries',
@@ -75,22 +77,25 @@ document.addEventListener('DOMContentLoaded', () => {
     var cards = document.querySelectorAll('img')
     const optionOneId = cardsChosenId[0]
     const optionTwoId = cardsChosenId[1]
-    if (cardsChosen[0] === cardsChosen[1]) {
-      alert('You found a match')
-      cards[optionOneId].setAttribute('src', 'images/white.png')
-      cards[optionTwoId].setAttribute('src', 'images/white.png')
-      cardsWon.push(cardsChosen)
-    } else {
-      cards[optionOneId].setAttribute('src', 'images/blank.png')
-      cards[optionTwoId].setAttribute('src', 'images/blank.png')
-      alert('Sorry, try again')
-    }
+    switch (cardsChosen[0]) {
+      case cardsChosen[1]:
+          alert('You found a match')
+          cards[optionOneId].setAttribute('src', 'images/white.png')
+          cards[optionOneId].setAttribute('src', 'images/white.png')
+          cardsWon.push(cardsChosen)
+          break;
+      default:
+          cards[optionOneId].setAttribute('src', 'images/blank.png')
+          cards[optionTwoId].setAttribute('src', 'images/blank.png')
+          alert('Sorry, try again')
+  }
     cardsChosen = []
     cardsChosenId = []
     resultDisplay.textContent = cardsWon.length
-    if  (cardsWon.length === cardArray.length/2) {
-      resultDisplay.textContent = 'Congratulations! You found them all!'
-    }
+    switch (cardsWon.length) {
+      case cardArray.length / 2:
+          resultDisplay.textContent = ' Congratulations! You found them all!'
+  }
   }
 
   //flip your card
@@ -99,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cardsChosen.push(cardArray[cardId].name)
     cardsChosenId.push(cardId)
     this.setAttribute('src', cardArray[cardId].img)
-    if (cardsChosen.length ===2) {
+    if (cardsChosen.length === 2) {
       setTimeout(checkForMatch, 500)
     }
   }
