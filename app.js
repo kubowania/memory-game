@@ -63,10 +63,17 @@ document.addEventListener('DOMContentLoaded', () => {
   function createBoard() {
     for (let i = 0; i < cardArray.length; i++) {
       var card = document.createElement('img')
-      card.setAttribute('src', 'images/blank.png')
+      card.setAttribute('src', cardArray[i].img)
       card.setAttribute('data-id', i)
       card.addEventListener('click', flipCard)
       grid.appendChild(card)
+    }
+    setTimeout(startGame,2000)
+  }
+  function startGame() {
+    var cards = document.querySelectorAll('img')
+    for (let i = 0; i < cardArray.length; i++) {
+      cards[i].setAttribute('src', 'images/blank.png') 
     }
   }
 
