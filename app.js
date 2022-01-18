@@ -102,13 +102,20 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   //flip your card
-  function flipCard() {
-    let cardId = this.getAttribute('data-id')
-    cardsChosen.push(cardArray[cardId].name)
-    cardsChosenId.push(cardId)
-    this.setAttribute('src', cardArray[cardId].img)
-    if (cardsChosen.length ===2) {
-      setTimeout(checkForMatch, 500)
+ function flipcard() {
+    let source = this.getAttribute("src");
+    if (source == "images/white.png") {
+      alert("Card No longer in Play!");
+      cardsChosen = [];
+      cardsChosenId = [];
+    } else {
+      let cardId = this.getAttribute("data-id");
+      cardsChosen.push(cardArray[cardId].name);
+      cardsChosenId.push(cardId);
+      this.setAttribute("src", cardArray[cardId].img);
+      if (cardsChosenId.length == 2) {
+        setTimeout(checkForMatch, 500);
+      }
     }
   }
 
