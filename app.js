@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   ]
 
-  cardArray.sort(() => 0.5 - Math.random())
+  cardArray.sort(() => 0.5 - Math.random());
 
   const grid = document.querySelector('.grid')
   const resultDisplay = document.querySelector('#result')
@@ -75,8 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('img')
     const optionOneId = cardsChosenId[0]
     const optionTwoId = cardsChosenId[1]
-    
-    if(optionOneId == optionTwoId) {
+
+    if (optionOneId == optionTwoId) {
       cards[optionOneId].setAttribute('src', 'images/blank.png')
       cards[optionTwoId].setAttribute('src', 'images/blank.png')
       alert('You have clicked the same image!')
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cardsChosen = []
     cardsChosenId = []
     resultDisplay.textContent = cardsWon.length
-    if  (cardsWon.length === cardArray.length/2) {
+    if (cardsWon.length === cardArray.length / 2) {
       resultDisplay.textContent = 'Congratulations! You found them all!'
     }
   }
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cardsChosen.push(cardArray[cardId].name)
     cardsChosenId.push(cardId)
     this.setAttribute('src', cardArray[cardId].img)
-    if (cardsChosen.length ===2) {
+    if (cardsChosen.length === 2) {
       setTimeout(checkForMatch, 500)
     }
   }
