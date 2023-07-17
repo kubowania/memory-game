@@ -49,9 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'hotdog',
       img: 'images/hotdog.png'
     }
-  ]
+  ];
 
-  cardArray.sort(() => 0.5 - Math.random())
+  cardArray.sort(() => 0.5 - Math.random());
 
   const grid = document.querySelector('.grid')
   const resultDisplay = document.querySelector('#result')
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cardsChosenId = []
     resultDisplay.textContent = cardsWon.length
     if  (cardsWon.length === cardArray.length/2) {
-      resultDisplay.textContent = 'Congratulations! You found them all!'
+      resultDisplay.textContent = cardsWon.length + ' Congratulations! You found them all!'
     }
   }
 
