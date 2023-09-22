@@ -49,9 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'hotdog',
       img: 'images/hotdog.png'
     }
-  ]
+  ];
 
-  cardArray.sort(() => 0.5 - Math.random())
+  cardArray.sort(() => 0.5 - Math.random());
 
   const grid = document.querySelector('.grid')
   const resultDisplay = document.querySelector('#result')
