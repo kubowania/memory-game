@@ -25,6 +25,7 @@ I have kept the styling at a bare miniumum for you to go wild and make it your o
 - If the next card you flip does not match, a pop up alert notifies you of ths and the cards flip back
 - The game continues until you match all the cards on the board
 
+
 ### MIT Licence
 
 Copyright (c) 2020 Ania Kubow
