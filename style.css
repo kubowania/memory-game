@@ -3,4 +3,29 @@
   flex-wrap: wrap;
   width: 400px;
   height: 300px;
+  position: absolute;
+  transform: translate(-50%);
+  left: 50%;
+}
+h3{
+  margin-left: 280px;
+}
+.btn{
+  padding: 12px 7px;
+  background-color: orange;
+  color: aliceblue;
+  position: absolute;
+  transform: translate(-50%);
+  left: 50%;
+  font-size: 30px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  transition:all 0.7s ;
+  z-index: 5;
+  border: none;
+  border-radius: 7px;
+}
+.btn:hover{
+  background-color: aliceblue;
+  color: orange;
+  outline: 1px orange solid;
 }

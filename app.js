@@ -79,10 +79,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if(optionOneId == optionTwoId) {
       cards[optionOneId].setAttribute('src', 'images/blank.png')
       cards[optionTwoId].setAttribute('src', 'images/blank.png')
-      alert('You have clicked the same image!')
+      //alert('You have clicked the same image!')
     }
     else if (cardsChosen[0] === cardsChosen[1]) {
-      alert('You found a match')
+     // alert('You found a match')
       cards[optionOneId].setAttribute('src', 'images/white.png')
       cards[optionTwoId].setAttribute('src', 'images/white.png')
       cards[optionOneId].removeEventListener('click', flipCard)
@@ -91,13 +91,14 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       cards[optionOneId].setAttribute('src', 'images/blank.png')
       cards[optionTwoId].setAttribute('src', 'images/blank.png')
-      alert('Sorry, try again')
+   //   alert('Sorry, try again')
     }
     cardsChosen = []
     cardsChosenId = []
     resultDisplay.textContent = cardsWon.length
     if  (cardsWon.length === cardArray.length/2) {
       resultDisplay.textContent = 'Congratulations! You found them all!'
+      Again()
     }
   }
 
@@ -114,3 +115,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   createBoard()
 })
+function Again(){
+  let btn=document.createElement("button")
+  let btntext=document.createTextNode("PLAY AGAIN")
+  btn.className="btn"
+  btn.append(btntext)
+  document.body.appendChild(btn)
+  btn.onclick=function(){
+    location.reload()
+  }
+}
