@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-  <meta charset="UTF-8">
-  <title>Memory Game</title>
-  <link rel="stylesheet" href="style.css"></link>
-  <script src="app.js" charset="utf-8"></script>
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Memory Game</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		/>
+		<script src="toggleTheme.js" defer></script>
+		<script src="app.js" defer></script>
+	</head>
+	<body class="light-theme">
+    <h3>Memory Game</h3>
+		<div class="header">
+			<h3>Score: <span id="result"></span></h3>
+			<div class="theme-toggle">
+				<i class="fas fa-toggle-off fa-3x" id="themeIcon"></i>
+			</div>
+		</div>
 
-  <h3>Score:<span id="result"></span></h3>
-
-  <div class="grid">
-  </div>
-
-</body>
+		<div class="grid"></div>
+	</body>
 </html>

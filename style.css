@@ -1,6 +1,68 @@
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	min-height: 80vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #0a0908;
+	transition: background-color 0.5s, color 0.5s; /* Smooth transition */
+	user-select: none;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+}
+
 .grid {
-  display: flex;
-  flex-wrap: wrap;
-  width: 400px;
-  height: 300px;
+	display: grid;
+	grid-template-columns: repeat(4, 100px); /* Adjust based on your layout */
+	gap: 4px; /* Space between cards */
+}
+
+h3 {
+	color: #eae0d5;
+	font-size: 2rem;
+}
+
+#grid img {
+	max-width: 98px;
+	max-height: 98px;
+}
+
+body.light-theme {
+	background-color: #f1f1f1;
+	h3,
+	h2 {
+		color: #333;
+	}
+	#themeIcon {
+		color: #333;
+	}
+}
+
+body.dark-theme {
+	background-color: #333;
+	h3,
+	h2 {
+		color: #f1f1f1;
+	}
+	#themeIcon {
+		color: #f1f1f1;
+	}
+}
+
+.theme-toggle {
+	margin-left: 40px;
+	text-align: center;
+}
+
+.theme-toggle i {
+	cursor: pointer;
+	transition: color 0.5s;
 }
