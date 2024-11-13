@@ -1,6 +1,13 @@
 .grid {
   display: flex;
   flex-wrap: wrap;
-  width: 400px;
-  height: 300px;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    flex-direction: column;
+    align-items: center;
+  }
 }
