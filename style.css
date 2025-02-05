@@ -1,6 +1,11 @@
-.grid {
+html,body {
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.grid {
   width: 400px;
   height: 300px;
 }
