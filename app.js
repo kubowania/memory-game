@@ -1,4 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+  //Getting the start game button
+
+  document.getElementById('startGame').addEventListener('click', 
+       () => {
+            document.querySelector('.game-box').style.display = 'flex';
+            document.getElementById('startGame').style.display = 'none'
+       }
+  )
+
   //list all card options
   const cardArray = [
     {
