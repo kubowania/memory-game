@@ -1,6 +1,156 @@
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  width: 400px;
-  height: 300px;
+body, .game-box{
+     display: flex;
+     align-items: center;
+     height: 90vh;
+     justify-content: center;
+     flex-direction: column;
+}
+
+.btn{
+     display: flex;
+     flex-wrap: wrap;
+     gap: 1rem;
+}
+
+.game-box{
+     display: none;
+}
+
+/* Button */
+#openRulesBtn, #startGame, #restartGame{
+  padding: 10px 20px;
+  background-color: #2e86de;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Modal Background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  animation: fadeIn 0.3s ease;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+  animation: slideUp 0.4s ease;
+}
+
+/* Close Button */
+.close-btn {
+  color: #aaa;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+/* Rule Styling */
+.rules-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.rules-content li {
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.green {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.red {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .modal-content {
+    width: 90%;
+    margin: 20% auto;
+  }
+}
+
+
+.change-green{
+     animation: green-bg .5s ease-in-out forwards;
+}
+
+@keyframes green-bg{
+     from{
+          background-color: red;
+     }
+
+     to{
+          background-color: green;
+     }
+}
+
+.change-red{
+     animation: red-bg .5s ease-in-out forwards;
+}
+
+@keyframes red-bg{
+     from{
+          background-color: green;
+     }
+
+     to{
+          background-color: red;
+     }
+}
+
+#grid{
+     width: 400px;
+     height: 300px;
+     display: flex;
+     flex-wrap: wrap;
+}
+
+.restart-game{
+     align-items: center;
+     justify-content: space-evenly;
+     flex-direction: column;
+}
+
+button{
+     cursor: pointer;
+     padding: 1rem;
 }
