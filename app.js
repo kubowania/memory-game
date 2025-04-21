@@ -51,7 +51,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   ]
 
-  cardArray.sort(() => 0.5 - Math.random())
+let shuffledArray = (array) => {
+     for(let i = array.length -1; i >= 0; i--){
+          let j = Math.floor(Math.random() * i + 1);
+
+          [array[i], array[j]] = [array[j], array[i]]
+     }
+
+     return array;
+}
 
   const grid = document.querySelector('.grid')
   const resultDisplay = document.querySelector('#result')
@@ -61,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //create your board
   function createBoard() {
-    for (let i = 0; i < cardArray.length; i++) {
+    for (let i = 0; i < shuffledArray.length; i++) {
       const card = document.createElement('img')
       card.setAttribute('src', 'images/blank.png')
       card.setAttribute('data-id', i)
