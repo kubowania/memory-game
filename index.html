@@ -8,10 +8,37 @@
 </head>
 <body>
 
-  <h3>Score:<span id="result"></span></h3>
-
-  <div class="grid">
+  
+<!-- Trigger Button -->
+<div class="btn">
+     <button id="openRulesBtn">Show Game Rules</button>
+     <button id="startGame">Start The Game</button>
+</div>
+<!-- Modal -->
+<div id="rulesModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>🧠 Memory Game – Beginner Level</h2>
+    <div class="rules-content">
+      <h3>How to Play</h3>
+      <ul>
+        <li><strong>🟦 Game Layout:</strong> 12 hidden boxes, each with a hidden image. 6 pairs in total.</li>
+        <li><strong>👆 Your Goal:</strong> Click any two boxes to reveal the images. Try to find two that match.</li>
+        <li><strong>✅ If the images match:</strong> You earn a point. The boxes turn <span class="green">green</span>.</li>
+        <li><strong>❌ If the images don't match:</strong> You don’t get a point. The boxes turn <span class="red">red</span>, then reset.</li>
+        <li><strong>🎯 Win Condition:</strong> Match all 6 pairs to complete the level. Use your memory to improve!</li>
+        <li><strong>🧩 Difficulty:</strong> Beginner – great for practicing your memory skills!</li>
+      </ul>
+    </div>
   </div>
+</div>
+
+
+     <div class="game-box">
+          <h3>Score: <span id="result"></span></h3>
+
+          <div id="grid" class='grid'></div>
+     </div>
 
 </body>
 </html>
