@@ -4,3 +4,7 @@
   width: 400px;
   height: 300px;
 }
+.grid img {
+  border: 5px solid black;
+  margin: 10px;
+}
