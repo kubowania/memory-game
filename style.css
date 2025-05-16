@@ -4,3 +4,60 @@
   width: 400px;
   height: 300px;
 }
+.pop{
+  visibility: hidden;
+  color: white;
+  background-color: #656262;
+  min-width:500px;
+  padding:15px;
+  text-align: center;
+  position: fixed;
+  left: 50%;
+  border-radius: 10px;
+  bottom:35px;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition:opacity 1.0s ease;
+}
+.pop.reveal{
+  visibility: visible;
+  opacity: 1.0;
+}
+.match{
+  visibility: hidden;
+  color: white;
+  background-color: #656262;
+  min-width:500px;
+  padding:15px;
+  text-align: center;
+  position: fixed;
+  left: 50%;
+  border-radius: 10px;
+  bottom:35px;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition:opacity 1.0s ease;
+}
+.match.reveal{
+  visibility: visible;
+  opacity: 1.0;
+}
+.sorry{
+  visibility: hidden;
+  color: white;
+  background-color: #656262;
+  min-width:500px;
+  padding:15px;
+  text-align: center;
+  position: fixed;
+  left: 50%;
+  border-radius: 10px;
+  bottom:35px;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition:opacity 1.0s ease;
+}
+.sorry.reveal{
+  visibility: visible;
+  opacity: 1.0;
+}

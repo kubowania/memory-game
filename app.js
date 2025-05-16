@@ -79,10 +79,19 @@ document.addEventListener('DOMContentLoaded', () => {
     if(optionOneId == optionTwoId) {
       cards[optionOneId].setAttribute('src', 'images/blank.png')
       cards[optionTwoId].setAttribute('src', 'images/blank.png')
-      alert('You have clicked the same image!')
+      const pop = document.getElementById("pop");
+      pop.classList.add('reveal');
+      setTimeout(() => {
+        pop.classList.remove('reveal');
+      },2000);
+
     }
     else if (cardsChosen[0] === cardsChosen[1]) {
-      alert('You found a match')
+      const match = document.getElementById("match");
+      match.classList.add('reveal');
+      setTimeout(() => {
+        match.classList.remove('reveal');
+      },2000);
       cards[optionOneId].setAttribute('src', 'images/white.png')
       cards[optionTwoId].setAttribute('src', 'images/white.png')
       cards[optionOneId].removeEventListener('click', flipCard)
@@ -91,7 +100,11 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       cards[optionOneId].setAttribute('src', 'images/blank.png')
       cards[optionTwoId].setAttribute('src', 'images/blank.png')
-      alert('Sorry, try again')
+      const sorry = document.getElementById("sorry");
+      sorry.classList.add('reveal');
+      setTimeout(() => {
+        sorry.classList.remove('reveal');
+      },2000);
     }
     cardsChosen = []
     cardsChosenId = []
